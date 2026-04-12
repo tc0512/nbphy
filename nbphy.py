@@ -1,40 +1,38 @@
-class Displacement: #距离s，传入m
-    def __init__(self, val):
-        self.val = val
-    def kilometre(self):
-        return self.val/1000
-    def decimetre(self):
-        return self.val*10
-    def centimetre(self):
-        return self.val*100
-    def millimetre(self):
-        return self.val*1000
-    def micrometre(self):
-        return self.val*1000000
-    def nanometre(self):
-        return self.val*1000000000
-class Time: #时间t，传入s
-    def __init__(self, val):
-        self.val = val
-    def century(self):
-        return self.val/3153600000
-    def year(self):
-        return self.val/31536000
-    def day(self):
-        return self.val/86400
-    def hour(self):
-        return self.val/3600
-    def minute(self):
-        return self.val/60
-    def millisecond(self):
-        return self.val*1000
-    def microsecond(self):
-        return self.val*1000000
-    def nanosecond(self):
-        return self.val*1000000000
-class Velocity: #速度v，传入m/s
-    def __init__(self, val):
-        self.val = val
-    def kilometre_per_hour(self):
-        return self.val*3.6
-
+def displacement(val, unit: str):
+    if unit=="km":
+        return val/1000
+    elif unit=="m":
+        return val
+    elif unit=="dm":
+        return val*10
+    elif unit=="cm":
+        return val*100
+    elif unit=="mm":
+        return val*1000
+    elif unit=="μm":
+        return val*1000000
+    elif unit=="nm":
+        return val*1000000000
+    raise NotImplementedError("unknown unit")
+def time(val, unit: str):
+    if unit=="y":
+        return val/31536000
+    elif unit=="d":
+        return val/86400
+    elif unit=="h":
+        return val/3600
+    elif unit=="min":
+        return val/60
+    elif unit=="s":
+        return val
+    elif unit=="ms":
+        return val*1000
+    elif unit=="μs":
+        return val*1000000
+    raise NotImplementedError("unknown unit")
+def velocity(val, unit: str):
+    if unit=="m/s":
+        return unit
+    elif unit=="km/h":
+        return unit/3.6
+    raise NotImplementedError("unknown unit")
