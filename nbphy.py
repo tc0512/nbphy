@@ -32,3 +32,9 @@ class Time: #时间t，传入s
         return self.val*1000000
     def nanosecond(self):
         return self.val*1000000000
+class Velocity: #速度v，传入m/s
+    def __init__(self, val):
+        self.val = val
+    def kilometre_per_hour(self):
+        return self.val*3.6
+
