@@ -15,11 +15,7 @@ def displacement(val, unit: str):
         return val*1000000000
     raise NotImplementedError("unknown unit")
 def time(val, unit: str):
-    if unit=="y":
-        return val/31536000
-    elif unit=="d":
-        return val/86400
-    elif unit=="h":
+    if unit=="h":
         return val/3600
     elif unit=="min":
         return val/60
@@ -35,4 +31,18 @@ def velocity(val, unit: str):
         return unit
     elif unit=="km/h":
         return unit/3.6
+    raise NotImplementedError("unknown unit")
+def density(val, unit: str):
+    if unit=="g/cm^3":
+        return val/1000
+    elif unit="kg/m^3":
+        return val
+    raise NotImplementedError("unknown unit")
+def force(val, unit: str):
+    if unit=="N":
+        return val
+    raise NotImplementedError("unknown unit")
+def pressure(val, unit: str):
+    if unit=="Pa":
+        return val
     raise NotImplementedError("unknown unit")
