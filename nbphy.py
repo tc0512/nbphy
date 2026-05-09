@@ -46,3 +46,11 @@ def pressure(val, unit: str):
     if unit=="Pa":
         return val
     raise NotImplementedError("unknown unit")
+def work(val, unit: str):
+    if unit=="J":
+        return val
+def power(val, unit: str):
+    if unit=="W":
+        return val
+    elif unit=="kW":
+        return val/1000
