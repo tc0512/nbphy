@@ -35,7 +35,7 @@ def velocity(val, unit: str):
 def density(val, unit: str):
     if unit=="g/cm^3":
         return val/1000
-    elif unit="kg/m^3":
+    elif unit=="kg/m^3":
         return val
     raise NotImplementedError("unknown unit")
 def force(val, unit: str):
