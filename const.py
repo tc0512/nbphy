@@ -4,3 +4,5 @@ def g():
     return 9.80665
 def pi():
     return 3.1415926535897932
+def c():
+    return 299792458
