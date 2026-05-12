@@ -1,1 +1,1 @@
-from .nbphy import*
+from .core import*
