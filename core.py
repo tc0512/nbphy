@@ -1,3 +1,10 @@
+class Unknown:
+    def __repr__(self):
+        return "Unknown"
+    def __bool__(self):
+        return False
+    def __contians__(self):
+        return False
 def displacement(val, unit: str):
     if unit=="km":
         return val*1000
@@ -54,3 +61,16 @@ def power(val, unit: str):
         return val
     elif unit=="kW":
         return val*1000
+def tabular(field: list, row: list):
+    table = PrettyTable()
+    table.field_names = field
+    for i in row:
+        table.add_row(i)
+    return table
+def average(data: list):
+    if len(data)==0:
+        raise ValueError("list is empty")
+    return sum(data)/len(data)
+def lever(F1, l1, F2, l2):
+    if F1==Unknown():
+        return f"F1={F2*l2/l1}"
