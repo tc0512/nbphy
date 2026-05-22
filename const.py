@@ -6,3 +6,5 @@ def pi():
     return 3.1415926535897932
 def c():
     return 299792458
+def speed_of_voice():
+    return 340
