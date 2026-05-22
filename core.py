@@ -74,3 +74,10 @@ def average(data: list):
 def lever(F1, l1, F2, l2):
     if F1==Unknown():
         return f"F1={F2*l2/l1}"
+    elif l1==Unknown():
+        return f"l1={F2*l2/F1}"
+    elif F2==Unknown():
+        return f"F2={F1*L1/l2}"
+    elif l2==Unknown():
+        return f"l2={F1*L1/F2}"
+    raise NotImplementedError("sorry,we cannot solve this situation")
