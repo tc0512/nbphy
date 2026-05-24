@@ -5,7 +5,7 @@ python基础物理库，可以做一些基础的物理计算
 ```python
 import nbphy
 F = nbphy.force(100, "N") #力100N
-s = displacement(5, "m") #距离5m
+s = nbphy.displacement(5, "m") #距离5m
 W = F*s #500
 print(W)
 ```
@@ -30,7 +30,7 @@ row = [
     [200, 2]
 ]
 print(nbphy.tabular(field, row))
-data = [3.40, 3.45. 3.47]
+data = [3.40, 3.45, 3.47]
 print(nbphy.average(data))
 ```
 

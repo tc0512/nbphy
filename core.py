@@ -1,3 +1,4 @@
+from prettytable import PrettyTable
 class Unknown:
     def __repr__(self):
         return "Unknown"
