@@ -16,6 +16,3 @@ dependencies = ["prettytable>=3.15.0"]
 
 [project.urls]
 Homepage = "https://github.com/tc0512/nbphy"
-
-[tool.setuptools]
-py-modules = ["core", "const"]
