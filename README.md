@@ -1,5 +1,5 @@
 # nbphy
-python零依赖物理库，可以做一些基础的物理计算
+python基础物理库，可以做一些基础的物理计算
 
 ## 快速开始
 ```python
@@ -20,3 +20,19 @@ print(W)
 - `pi`圆周率 `density_of_water`水的密度
 
 ## 示例代码
+```python
+import nbphy
+field = ["钩码质量(g)", "弹簧测力计示数(N)"]
+row = [
+    [50, 0.5],
+    [100, 1],
+    [150, 1.5],
+    [200, 2]
+]
+print(nbphy.tabular(field, row))
+data = [3.40, 3.45. 3.47]
+print(nbphy.average(data))
+```
+
+## 许可证
+MIT
