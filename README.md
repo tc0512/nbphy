@@ -1,6 +1,11 @@
 # nbphy
 python基础物理库，可以做一些基础的物理计算
 
+## 安装
+```bash
+pip install nbphy
+```
+
 ## 快速开始
 ```python
 import nbphy
