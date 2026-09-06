@@ -8,3 +8,5 @@ def c():
     return 299792458
 def speed_of_voice():
     return 340
+def specific_heat_capacity_of_water():
+    return 4200

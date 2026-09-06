@@ -15,9 +15,11 @@ print(W)
 - `displacement`距离 `force`力 `work`功
 - `time`时间 `lever`杠杆 `velocity`速度
 - `density`密度 `pressure`压强 `tabular`表格绘制函数
+- `heat`热量 `specific_heat_capacity`比热容
 ### `nbphy.const`常量模块
 - `g`重力加速度 `c`光速
 - `pi`圆周率 `density_of_water`水的密度
+- `specific_heat_capacity_of_water`水的比热容
 
 ## 示例代码
 ```python

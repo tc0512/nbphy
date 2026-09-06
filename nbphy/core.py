@@ -57,11 +57,13 @@ def pressure(val, unit: str):
 def work(val, unit: str):
     if unit=="J":
         return val
+    raise NotImplementedError("unknown unit")
 def power(val, unit: str):
     if unit=="W":
         return val
     elif unit=="kW":
         return val*1000
+    raise NotImplementedError("unknown unit")
 def tabular(field: list, row: list):
     table = PrettyTable()
     table.field_names = field
@@ -81,4 +83,14 @@ def lever(F1, l1, F2, l2):
         return f"F2={F1*L1/l2}"
     elif l2==Unknown():
         return f"l2={F1*L1/F2}"
+    elif Unknown() not in [F1, l1, F2, l2]:
+        return f"lever establish: {F1*l1==F2*l2}"
     raise NotImplementedError("sorry,we cannot solve this situation")
+def heat(val, unit: str):
+    if unit=="J":
+        return val
+    raise NotImplementedError("unknown unit")
+def specific_heat_capacity(val, unit: str):
+    if unit=="J/(kg·℃)":
+        return val
+    raise NotImplementedError("unknown unit")
