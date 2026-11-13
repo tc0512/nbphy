@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nbphy"
-version = "0.2.0"
+version = "0.3.0"
 description = "python基础物理计算库"
 authors = [
     {name = "tc0512", email = "tancheng_0812@qq.com"}
 ]
-license = {text = "MIT"}
+license = "MIT"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = ["prettytable>=3.15.0"]
