@@ -21,6 +21,7 @@ print(W)
 - `time`时间 `lever`杠杆 `velocity`速度
 - `density`密度 `pressure`压强 `tabular`表格绘制函数
 - `heat`热量 `specific_heat_capacity`比热容
+- `resuster`电阻 `voltage`电压 `current`电流
 ### `nbphy.const`常量模块
 - `g`重力加速度 `c`光速
 - `pi`圆周率 `density_of_water`水的密度
