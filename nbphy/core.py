@@ -80,9 +80,9 @@ def lever(F1, l1, F2, l2):
     elif l1==Unknown():
         return f"l1={F2*l2/F1}"
     elif F2==Unknown():
-        return f"F2={F1*L1/l2}"
+        return f"F2={F1*l1/l2}"
     elif l2==Unknown():
-        return f"l2={F1*L1/F2}"
+        return f"l2={F1*l1/F2}"
     elif Unknown() not in [F1, l1, F2, l2]:
         return f"lever establish: {F1*l1==F2*l2}"
     raise NotImplementedError("sorry,we cannot solve this situation")
@@ -92,5 +92,29 @@ def heat(val, unit: str):
     raise NotImplementedError("unknown unit")
 def specific_heat_capacity(val, unit: str):
     if unit=="J/(kg·℃)":
+        return val
+    raise NotImplementedError("unknown unit")
+def voltage(val, unit: str):
+    if unit=="kV":
+        return val*1000
+    elif unit=="V":
+        return val
+    elif unit=="mV":
+        return val/1000
+    raise NotImplementedError("unknown unit")
+def current(val, unit: str):
+    if unit=="A":
+        return val
+    elif unit=="mA":
+        return val/1000
+    elif unit=="μA":
+        return val/1000000
+    raise NotImplementedError("unknown unit")
+def resistor(val, unit: str):
+    if unit=="MΩ":
+        return val*1000000
+    elif unit=="KΩ":
+        return val*1000
+    elif unit=="Ω":
         return val
     raise NotImplementedError("unknown unit")
